@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewBook">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <include
+                android:id="@+id/view_book_toolbar"
+                layout="@layout/app_layout">
+            </include>
+
+            <TextView
+                android:id="@+id/view_books_sn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:hint="@string/sN"
+                android:textAllCaps="false"
+                android:inputType="number"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <TextView
+                android:id="@+id/view_title_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_books_sn"
+                android:layout_marginTop="0dp"
+                android:hint="@string/title"
+                android:textAllCaps="false"
+                android:inputType="textMultiLine"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <TextView
+                android:id="@+id/view_author_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_title_books"
+                android:layout_marginTop="0dp"
+                android:hint="@string/author"
+                android:textAllCaps="false"
+                android:inputType="textMultiLine"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <TextView
+                android:id="@+id/view_comment_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_author_books"
+                android:layout_marginTop="0dp"
+                android:hint="@string/comment"
+                android:textAllCaps="false"
+                android:inputType="textMultiLine"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <TextView
+                android:id="@+id/view_content_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_comment_books"
+                android:layout_marginTop="0dp"
+                android:hint="@string/content"
+                android:textAllCaps="false"
+                android:inputType="textMultiLine"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/view_add_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_content_books"
+                android:layout_marginTop="10dp"
+                android:text="@string/addNewBook"
+                android:layout_marginStart="25dp"
+                android:textAllCaps="true"
+                android:layout_marginEnd="25dp"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_add_button"
+                android:layout_marginTop="10dp"
+                android:text="@string/delete"
+                android:layout_marginStart="25dp"
+                android:textAllCaps="true"
+                android:layout_marginEnd="25dp"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

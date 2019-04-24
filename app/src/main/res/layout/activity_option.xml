@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Option">
+
+    <include
+        android:id="@+id/option_toobar"
+        layout="@layout/app_layout">
+    </include>
+
+    <Button
+        android:id="@+id/view_books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_below="@id/option_toobar"
+        android:layout_marginTop="30dp"
+        android:text="@string/viewBook"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+       />
+
+    <Button
+        android:id="@+id/add_books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_below="@id/view_books"
+        android:layout_marginTop="30dp"
+        android:text="@string/addBooks"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        />
+
+    <TextView
+        android:id="@+id/powered1"
+        android:layout_width="232dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/add_books"
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:contentDescription="@string/powered"
+        android:focusable="true"
+        android:text="@string/powered"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp" />
+
+</RelativeLayout>

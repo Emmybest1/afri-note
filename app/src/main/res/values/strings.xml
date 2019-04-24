@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">eBookkeping.abc</string>
+    <string name="welcome">Welcome to ABC eBookkeeping System</string>
+    <string name="welcome_to_abc_ebookkeeping">Welcome to Abc eBookkeeping</string>
+    <string name="todo1">TODO</string>
+    <string name="button1">Continue</string>
+    <string name="mySite">
+        <a href="https://jerryjoetech.com/">homepage</a>
+    </string>
+    <string name="number">+37258311750</string>
+    <string name="powered">
+        <a href="https://jerryjoetech.com/">powered by jerryJoeTech.ng</a>
+    </string>
+    <string name="this_is_an_electronic_bookkeeping_system_designed_to_enhance_the_bookkeeping_of_abc_company">This is an electronic bookkeeping system designed to enhance the bookkeeping of ABC company</string>
+    <string name="return1">Return</string>
+    <string name="viewBook">View Books</string>
+    <string name="addBooks">Add Books</string>
+    <string name="sN">serial number:</string>
+    <string name="title">book titile: </string>
+    <string name="author">book author:</string>
+    <string name="comment">book comment:</string>
+    <string name="content">book content:</string>
+    <string name="add">Add</string>
+    <string name="addNewBook">Add new Book</string>
+    <string name="delete">Delete Book</string>
+</resources>

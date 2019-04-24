@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addbook">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <include
+                android:id="@+id/add_book_toolbar"
+                layout="@layout/app_layout">
+            </include>
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:hint="email:"
+                android:textAllCaps="false"
+                android:inputType="textEmailAddress"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email"
+                android:layout_marginTop="0dp"
+                android:hint="password"
+                android:textAllCaps="false"
+                android:inputType="textVisiblePassword"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password"
+                android:layout_marginTop="10dp"
+                android:text="Register First"
+                android:layout_marginStart="25dp"
+                android:textAllCaps="true"
+                android:layout_marginEnd="25dp"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+            <EditText
+                android:id="@+id/add_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:hint="@string/sN"
+                android:layout_below="@id/register_button"
+                android:textAllCaps="false"
+                android:inputType="number"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <EditText
+                android:id="@+id/title_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_books"
+                android:layout_marginTop="0dp"
+                android:hint="@string/title"
+                android:textAllCaps="false"
+                android:inputType="text"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <EditText
+                android:id="@+id/author_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_books"
+                android:layout_marginTop="0dp"
+                android:hint="@string/author"
+                android:textAllCaps="false"
+                android:inputType="text"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <EditText
+                android:id="@+id/comment_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/author_books"
+                android:layout_marginTop="0dp"
+                android:hint="@string/comment"
+                android:textAllCaps="false"
+                android:inputType="text"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <EditText
+                android:id="@+id/content_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/comment_books"
+                android:layout_marginTop="0dp"
+                android:hint="@string/content"
+                android:textAllCaps="false"
+                android:inputType="textMultiLine"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_books"
+                android:layout_marginTop="10dp"
+                android:text="@string/addBooks"
+                android:layout_marginStart="25dp"
+                android:textAllCaps="true"
+                android:layout_marginEnd="25dp"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>
