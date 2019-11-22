@@ -4,19 +4,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Displayer">
+    android:layout_height="match_parent">
 
 <include
     android:id="@+id/diplayer_toolbar"
    layout="@layout/app_layout">
 </include>
+<!--Old model of view items.RecyclerList is better because of viewHolder class
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/book_list_view"
+    <ListView
+        android:id="@+id/myListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/diplayer_toolbar"/>
+        android:divider="@color/colorAccent"
+        android:dividerHeight="1dp"
+        android:listSelector="@color/colorPrimaryDark"/>
+-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/book_recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="150dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true" />
 
 
 </RelativeLayout>

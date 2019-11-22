@@ -13,11 +13,15 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.HashMap;
 
-public class addbook extends AppCompatActivity {
+public class EditBook extends AppCompatActivity {
     private Toolbar mToolbar;
     private EditText item1, item2, item3, item4, item5;
     private Button addButton;
@@ -28,7 +32,7 @@ public class addbook extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addbook);
+        setContentView(R.layout.activity_edit_book);
 
         mAuth = FirebaseAuth.getInstance();
         currentUserId = mAuth.getCurrentUser().getUid();
@@ -41,13 +45,13 @@ public class addbook extends AppCompatActivity {
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setTitle("Add Book");
 
-        item1 = findViewById(R.id.item1);
-        item2 = findViewById(R.id.item2);
-        item3 = findViewById(R.id.item3);
-        item4 = findViewById(R.id.item4);
-        item5 = findViewById(R.id.item5);
+        item1 = findViewById(R.id.edititem1);
+        item2 = findViewById(R.id.edititem2);
+        item3 = findViewById(R.id.edititem3);
+        item4 = findViewById(R.id.edititem4);
+        item5 = findViewById(R.id.edititem5);
 
-        addButton = findViewById(R.id.add_button);
+        addButton = findViewById(R.id.editadd_button);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +59,72 @@ public class addbook extends AppCompatActivity {
                 collectBookInfo();
             }
         });
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        retrieveBooksInfo();
+    }
+
+    //To retrieve book Info updated info
+    private void retrieveBooksInfo() {
+        mDatabaseReference.child("Users").child(currentUserId).child("Notes")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        if((dataSnapshot.exists())&& (dataSnapshot.hasChild("Item1"))){
+                            String retrieveItem1=dataSnapshot.child("Item1").getValue().toString();
+
+                            item1.setText(retrieveItem1);
+                        }
+                        if((dataSnapshot.exists())&& (dataSnapshot.hasChild("Item2"))){
+                            String retrieveItem2=dataSnapshot.child("Item2").getValue().toString();
+
+                            item2.setText(retrieveItem2);
+                        }
+                        if((dataSnapshot.exists())&& (dataSnapshot.hasChild("Item3"))){
+                            String retrieveItem3=dataSnapshot.child("Item3").getValue().toString();
+
+                            item3.setText(retrieveItem3);
+                        }
+                        if((dataSnapshot.exists())&& (dataSnapshot.hasChild("Item4"))){
+                            String retrieveItem4=dataSnapshot.child("Item4").getValue().toString();
+
+                            item4.setText(retrieveItem4);
+                        }
+                        if((dataSnapshot.exists())&& (dataSnapshot.hasChild("Item5"))){
+                            String retrieveItem5=dataSnapshot.child("Item5").getValue().toString();
+
+                            item5.setText(retrieveItem5);
+                        }
+
+                        else if((dataSnapshot.exists())&& (dataSnapshot.hasChild("Item1"))&&(dataSnapshot.hasChild("Item2"))&&(dataSnapshot.hasChild("Item3"))&&(dataSnapshot.hasChild("Item4"))&&(dataSnapshot.hasChild("Item5"))){
+
+                            String retrieveItem1=dataSnapshot.child("Item1").getValue().toString();
+                            String retrieveItem2=dataSnapshot.child("Item2").getValue().toString();
+                            String retrieveItem3=dataSnapshot.child("Item3").getValue().toString();
+                            String retrieveItem4=dataSnapshot.child("Item4").getValue().toString();
+                            String retrieveItem5=dataSnapshot.child("Item5").getValue().toString();
+
+                            item1.setText(retrieveItem1);
+                            item2.setText(retrieveItem2);
+                            item3.setText(retrieveItem3);
+                            item4.setText(retrieveItem4);
+                            item5.setText(retrieveItem5);
+                        }
+
+                        else if(!dataSnapshot.exists()){
+
+                            Toast.makeText(EditBook.this, "No note to edit", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
     }
 
 
@@ -79,15 +149,15 @@ public class addbook extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Intent intent = new Intent(addbook.this, ViewBook.class);
+                                Intent intent = new Intent(EditBook.this, ViewBook.class);
                                 startActivity(intent);
-                                Toast.makeText(addbook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
 
                                 item1.setText("");
 
                             } else {
                                 String message = task.getException().toString();
-                                Toast.makeText(addbook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
                             }
                         }
 
@@ -106,15 +176,15 @@ public class addbook extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Intent intent = new Intent(addbook.this, ViewBook.class);
+                                Intent intent = new Intent(EditBook.this, ViewBook.class);
                                 startActivity(intent);
-                                Toast.makeText(addbook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
 
                                 item2.setText("");
 
                             } else {
                                 String message = task.getException().toString();
-                                Toast.makeText(addbook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
                             }
                         }
 
@@ -134,15 +204,15 @@ public class addbook extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Intent intent = new Intent(addbook.this, ViewBook.class);
+                                Intent intent = new Intent(EditBook.this, ViewBook.class);
                                 startActivity(intent);
-                                Toast.makeText(addbook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
 
                                 item3.setText("");
 
                             } else {
                                 String message = task.getException().toString();
-                                Toast.makeText(addbook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
                             }
                         }
 
@@ -160,16 +230,16 @@ public class addbook extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Intent intent = new Intent(addbook.this, ViewBook.class);
+                                Intent intent = new Intent(EditBook.this, ViewBook.class);
                                 startActivity(intent);
-                                Toast.makeText(addbook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
 
                                 item4.setText("");
 
 
                             } else {
                                 String message = task.getException().toString();
-                                Toast.makeText(addbook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
                             }
                         }
 
@@ -189,15 +259,15 @@ public class addbook extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Intent intent = new Intent(addbook.this, ViewBook.class);
+                                Intent intent = new Intent(EditBook.this, ViewBook.class);
                                 startActivity(intent);
-                                Toast.makeText(addbook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Notes successfully added", Toast.LENGTH_SHORT).show();
 
                                 item5.setText("");
 
                             } else {
                                 String message = task.getException().toString();
-                                Toast.makeText(addbook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(EditBook.this, "Error:" + message, Toast.LENGTH_SHORT).show();
                             }
                         }
 
@@ -206,8 +276,8 @@ public class addbook extends AppCompatActivity {
         }
 
         else if(TextUtils.isEmpty(Item1) && TextUtils.isEmpty(Item2) && TextUtils.isEmpty(Item3) && TextUtils.isEmpty(Item4)
-        && TextUtils.isEmpty(Item5)){
-            Toast.makeText(addbook.this, "all note fields can't be empty", Toast.LENGTH_SHORT).show();
+                && TextUtils.isEmpty(Item5)){
+            Toast.makeText(EditBook.this, "all note fields can't be empty", Toast.LENGTH_SHORT).show();
 
         }
 

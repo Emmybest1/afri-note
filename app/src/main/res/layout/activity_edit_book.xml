@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addbook">
+    tools:context=".EditBook">
 
 
     <LinearLayout
@@ -23,7 +23,7 @@
 
 
             <EditText
-                android:id="@+id/item1"
+                android:id="@+id/edititem1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/sN"
@@ -41,10 +41,10 @@
                 android:importantForAutofill="no" tools:targetApi="o"/>
 
             <EditText
-                android:id="@+id/item2"
+                android:id="@+id/edititem2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/item1"
+                android:layout_below="@id/edititem1"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:hint="@string/title"
@@ -59,14 +59,14 @@
                 android:importantForAutofill="no" tools:targetApi="o"/>
 
             <EditText
-                android:id="@+id/item3"
+                android:id="@+id/edititem3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/item2"
+                android:layout_below="@id/edititem2"
                 android:layout_marginTop="5dp"
                 android:hint="@string/author"
                 android:padding="20dp"
-                android:textColor="#ffffffff"
+                android:textColor="#fff"
                 android:layout_marginBottom="5dp"
                 android:textColorHint="#cfcfcf"
                 android:background="@drawable/viewnotesfield"
@@ -77,10 +77,10 @@
                 android:importantForAutofill="no" tools:targetApi="o"/>
 
             <EditText
-                android:id="@+id/item4"
+                android:id="@+id/edititem4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/item3"
+                android:layout_below="@id/edititem3"
                 android:layout_marginTop="5dp"
                 android:hint="@string/comment"
                 android:layout_marginBottom="5dp"
@@ -96,10 +96,10 @@
                 tools:targetApi="o"/>
 
             <EditText
-                android:id="@+id/item5"
+                android:id="@+id/edititem5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/item4"
+                android:layout_below="@id/edititem4"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:hint="@string/content"
@@ -115,10 +115,10 @@
                 tools:targetApi="o"/>
 
             <Button
-                android:id="@+id/add_button"
+                android:id="@+id/editadd_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/item5"
+                android:layout_below="@id/edititem5"
                 android:layout_marginLeft="70dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginRight="70dp"
@@ -126,7 +126,7 @@
                 android:gravity="center"
                 android:layout_marginBottom="20dp"
                 android:importantForAutofill="no"
-                android:text="@string/addBooks"
+                android:text="@string/saveChange"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textStyle="bold"

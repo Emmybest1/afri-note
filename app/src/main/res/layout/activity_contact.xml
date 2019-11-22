@@ -5,68 +5,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".Contact">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <include
+        android:id="@+id/contact_layout"
+        layout="@layout/app_layout">
+
+    </include>
+
+    <ImageView
         android:id="@+id/developer"
         android:layout_width="match_parent"
         android:layout_height="309dp"
+        android:layout_below="@id/contact_layout"
+        android:text="@string/feelFreeToContact"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/developer"
-        android:background="@drawable/estonia"/>
+        android:background="@drawable/note2"/>
 
     <TextView
-        android:id="@+id/homepage"
+        android:id="@+id/contactUs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mySite"
         android:layout_below="@+id/developer"
+        android:layout_marginTop="2dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:typeface="serif"
+        android:background="#fff"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="sans-serif-thin"
         android:padding="12dp"
-        android:textSize="20sp"
-        android:clickable="true"
-        android:focusable="true"
-        android:textColor="@color/colorPrimary"
-        />
-    <TextView
-        android:id="@+id/contact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/number"
-        android:layout_below="@+id/homepage"
-        android:padding="12dp"
-        android:textSize="20sp"
-        android:clickable="true"
-        android:focusable="true"
-        android:textColor="@color/colorPrimary"
-        />
+        android:text="@string/contactUs"
+        android:textSize="14sp"/>
 
-    <Button
-        android:id="@+id/returnButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/contact"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:background="@color/colorAccent"
-        android:fontFamily="cursive"
-        android:padding="15dp"
-        android:text="@string/return1"
-        android:textColor="#ffffffff"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/returnButton"
-        android:layout_marginStart="195dp"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="12dp"
-        android:focusable="true"
-        android:clickable="true"
-        android:contentDescription="@string/powered"
-        android:text="@string/powered"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold" />
 </RelativeLayout>

@@ -14,19 +14,45 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="316dp"
-        android:layout_height="470dp"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
         android:layout_marginBottom="32dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/note2"
+        android:contentDescription="@string/app_name"
         android:fontFamily="serif-monospace"
         android:gravity="center"
-        android:text="@string/this_is_an_electronic_bookkeeping_system_designed_to_enhance_the_bookkeeping_of_abc_company"
-        android:textColor="#ffffffff"
-        android:textSize="20sp"
+        android:text="@string/aboutAfricNote"
+        android:textColor="#000"
+        android:typeface="serif"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_layout"
+        app:layout_constraintVertical_bias="0.202" />
+
+    <Button
+        android:id="@+id/forward"
+        android:layout_width="220dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
+        android:layout_marginBottom="41dp"
+        android:background="@drawable/button_design"
+        android:fontFamily="sans-serif-thin"
+        android:text="Forward"
+        android:typeface="serif"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </android.support.constraint.ConstraintLayout>

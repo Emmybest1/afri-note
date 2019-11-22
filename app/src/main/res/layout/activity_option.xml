@@ -17,11 +17,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="30dp"
+        android:background="@color/textColor2"
         android:layout_below="@id/option_toobar"
         android:layout_marginTop="30dp"
         android:text="@string/viewBook"
         android:textSize="16sp"
-        android:textColor="@color/colorAccent"
+        android:textColor="#fff"
        />
 
     <Button
@@ -31,9 +32,10 @@
         android:padding="30dp"
         android:layout_below="@id/view_books"
         android:layout_marginTop="30dp"
+        android:background="@color/textColor1"
         android:text="@string/addBooks"
         android:textSize="16sp"
-        android:textColor="@color/colorAccent"
+        android:textColor="#fff"
         />
 
     <TextView

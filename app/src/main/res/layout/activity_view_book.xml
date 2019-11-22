@@ -21,68 +21,200 @@
             </include>
 
             <TextView
-                android:id="@+id/view_books_sn"
+                android:id="@+id/item1View"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:hint="@string/sN"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#fff"
+                android:padding="10dp"
+                android:paddingLeft="15dp"
+                android:background="@drawable/viewnotesfield"
                 android:textAllCaps="false"
-                android:inputType="number"
-                android:importantForAutofill="no" tools:targetApi="o"/>
+                android:textSize="16sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+              <Button
+                  android:id="@+id/item1deletebtn"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:textAlignment="center"
+                  android:layout_marginLeft="100dp"
+                  android:layout_marginRight="100dp"
+                  android:background="@drawable/btndesign"
+                  android:textColor="#fff"
+                  android:textAllCaps="false"
+                  android:fontFamily="sans-serif"
+                  android:typeface="serif"
+                  android:text="@string/deleteItem1"
+                  android:layout_below="@id/item1View">
+
+              </Button>
 
             <TextView
-                android:id="@+id/view_title_books"
+                android:id="@+id/item2View"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/view_books_sn"
-                android:layout_marginTop="0dp"
-                android:hint="@string/title"
+                android:layout_below="@id/item1deletebtn"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp"
+                android:paddingLeft="15dp"
+                android:background="@drawable/viewnotesfield"
+                android:textSize="16sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:textAllCaps="false"
-                android:inputType="textMultiLine"
-                android:importantForAutofill="no" tools:targetApi="o"/>
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/item2deletebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/btndesign"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:typeface="serif"
+                android:text="@string/deleteItem2"
+                android:layout_below="@id/item2View">
+
+            </Button>
 
             <TextView
-                android:id="@+id/view_author_books"
+                android:id="@+id/item3View"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/view_title_books"
-                android:layout_marginTop="0dp"
-                android:hint="@string/author"
+                android:layout_below="@id/item2deletebtn"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:padding="10dp"
+                android:paddingLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/viewnotesfield"
+                android:textSize="16sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:textAllCaps="false"
-                android:inputType="textMultiLine"
-                android:importantForAutofill="no" tools:targetApi="o"/>
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/item3deletebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/btndesign"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:typeface="serif"
+                android:text="@string/deleteItem3"
+                android:layout_below="@id/item3View">
+
+            </Button>
 
             <TextView
-                android:id="@+id/view_comment_books"
+                android:id="@+id/item4View"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/view_author_books"
-                android:layout_marginTop="0dp"
-                android:hint="@string/comment"
+                android:layout_below="@id/item3deletebtn"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:padding="10dp"
+                android:paddingLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/viewnotesfield"
                 android:textAllCaps="false"
-                android:inputType="textMultiLine"
-                android:importantForAutofill="no" tools:targetApi="o"/>
+                android:textSize="16sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/item4deletebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_marginLeft="100dp"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:typeface="serif"
+                android:background="@drawable/btndesign"
+                android:text="@string/deleteItem4"
+                android:layout_marginRight="100dp"
+                android:layout_below="@id/item4View">
+
+            </Button>
 
             <TextView
-                android:id="@+id/view_content_books"
+                android:id="@+id/item5View"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/view_comment_books"
-                android:layout_marginTop="0dp"
-                android:hint="@string/content"
+                android:layout_below="@id/item4deletebtn"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:textColorHint="#fff"
+                android:padding="10dp"
+                android:paddingLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/viewnotesfield"
                 android:textAllCaps="false"
-                android:inputType="textMultiLine"
-                android:importantForAutofill="no" tools:targetApi="o"/>
+                android:textSize="16sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/item5deletebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/btndesign"
+                android:layout_marginRight="100dp"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:typeface="serif"
+                android:text="@string/deleteItem5"
+                android:layout_below="@id/item5View">
+            </Button>
 
             <Button
                 android:id="@+id/view_add_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/view_content_books"
+                android:layout_below="@id/item5deletebtn"
                 android:layout_marginTop="10dp"
                 android:text="@string/addNewBook"
                 android:layout_marginStart="25dp"
-                android:textAllCaps="true"
+                android:background="@drawable/btndesign"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:typeface="serif"
                 android:layout_marginEnd="25dp"
                 android:importantForAutofill="no" tools:targetApi="o"/>
 
@@ -94,9 +226,29 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/delete"
                 android:layout_marginStart="25dp"
-                android:textAllCaps="true"
+                android:background="@drawable/btndesign"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:typeface="serif"
                 android:layout_marginEnd="25dp"
                 android:importantForAutofill="no" tools:targetApi="o"/>
+
+            <Button
+                android:id="@+id/editbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:typeface="serif"  android:text="@string/editButton"
+                android:background="@drawable/btndesign"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/delete_button">
+            </Button>
         </RelativeLayout>
     </LinearLayout>
 
